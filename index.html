@@ -69,8 +69,8 @@
   .scroll-hint { text-align: center; color: #4b5563; font-size: 11px; padding: 4px 0 8px; }
 
   .bracket-grid {
-    display: grid; grid-template-columns: 190px 190px 160px 190px 190px;
-    gap: 0; align-items: start; justify-content: center; min-width: 960px;
+    display: grid; grid-template-columns: 200px 180px 200px;
+    gap: 0; align-items: start; justify-content: center; min-width: 580px;
   }
   .col { display: flex; flex-direction: column; }
   .col-center { display: flex; flex-direction: column; justify-content: center; align-items: stretch; }
@@ -227,21 +227,13 @@
   <div class="stats-bar" id="statsBar"></div>
   <div class="dead-banner" id="deadBanner">
     <h2>Eliminated From Contention</h2>
-    <p>This bracket has zero remaining paths to winning the group. No combination of results can put them in first place.</p>
-  </div>
-  <div class="elimination-banner" id="elimBanner">
-    <h3>Elite 8 Elimination Risk</h3>
-    <div id="elimGames"></div>
-  </div>
-  <div class="safe-banner" id="safeBanner">
-    <p>No single Elite 8 result can eliminate this bracket — all 4 outcomes keep at least some winning paths alive.</p>
+    <p>This bracket has zero remaining paths to winning the group. No combination of Final Four and Championship results can put them in first place.</p>
   </div>
   <div class="bracket-legend">
     <div class="legend-item"><div class="legend-dot" style="background:#22c55e;"></div> Must win (100%)</div>
     <div class="legend-item"><div class="legend-dot" style="background:#22c55e;opacity:0.6;"></div> Strong requirement (>50%)</div>
     <div class="legend-item"><div class="legend-dot" style="background:#3b82f6;"></div> Flexible — wins in some paths</div>
     <div class="legend-item"><div class="legend-dot" style="background:#6b7280;"></div> Not in any winning path</div>
-    <div class="legend-item"><div class="legend-dot" style="background:#ef4444;"></div> If this team wins -> bracket eliminated</div>
     <div class="legend-item" style="color:#60a5fa;">★ = Bracket's pick</div>
   </div>
   <div class="bracket-container">
@@ -277,7 +269,7 @@
 <div class="footer">CO Cougs 2026 — Generated March 28, 2026</div>
 
 <script>
-const BDATA = {"brackets":{"Ranger's Benchwarmers":{"name":"Ranger's Benchwarmers","owner":"Sarah Pierce","current_pts":840,"champion":"MICH","tiebreaker_score":0,"outright_wins":4,"tiebreak_wins":0,"total_scenarios":4,"win_pct":50.0,"s16_picks":["DUKE","CONN","NEB","HOU","ARIZ","GONZ","MICH","TENN"],"e8_picks":["DUKE","HOU","ARIZ","MICH"],"f4_picks":["DUKE","MICH"],"e8_pct":[{"CONN":100.0},{"ILL":100.0},{"ARIZ":100.0},{"MICH":100.0}],"f4_pct":[{"CONN":50.0,"ILL":50.0},{"MICH":100.0}],"champ_pct":{"CONN":25.0,"MICH":50.0,"ILL":25.0},"e8_elimination":[],"min_score":1000,"max_score":1320,"alive":true},"sauced":{"name":"sauced","owner":"sawyer forseth","current_pts":790,"champion":"ARIZ","tiebreaker_score":0,"outright_wins":0,"tiebreak_wins":0,"total_scenarios":0,"win_pct":0.0,"s16_picks":["DUKE","UCLA","NEB","ILL","ARIZ","GONZ","MICH","ISU"],"e8_picks":["DUKE","ILL","ARIZ","ISU"],"f4_picks":["DUKE","ARIZ"],"e8_pct":[{},{},{},{}],"f4_pct":[{},{}],"champ_pct":{},"e8_elimination":[],"min_score":0,"max_score":0,"alive":false},"The Wine Woodtips":{"name":"The Wine Woodtips","owner":"joe katz","current_pts":750,"champion":"ARIZ","tiebreaker_score":0,"outright_wins":0,"tiebreak_wins":0,"total_scenarios":0,"win_pct":0.0,"s16_picks":["KU","MSU","CLEM","HOU","ARIZ","MIA","MICH","ISU"],"e8_picks":["KU","HOU","ARIZ","MICH"],"f4_picks":["HOU","ARIZ"],"e8_pct":[{},{},{},{}],"f4_pct":[{},{}],"champ_pct":{},"e8_elimination":[],"min_score":0,"max_score":0,"alive":false},"Celeb":{"name":"Celeb","owner":"Caleb Buzzas","current_pts":660,"champion":"DUKE","tiebreaker_score":0,"outright_wins":0,"tiebreak_wins":0,"total_scenarios":0,"win_pct":0.0,"s16_picks":["DUKE","LOU","FLA","TA&M","ARIZ","PUR","TTU","TENN"],"e8_picks":["DUKE","FLA","ARIZ","TENN"],"f4_picks":["DUKE","TENN"],"e8_pct":[{},{},{},{}],"f4_pct":[{},{}],"champ_pct":{},"e8_elimination":[],"min_score":0,"max_score":0,"alive":false},"Butt toast":{"name":"Butt toast","owner":"Alex Nasralla","current_pts":700,"champion":"ARIZ","tiebreaker_score":0,"outright_wins":0,"tiebreak_wins":0,"total_scenarios":0,"win_pct":0.0,"s16_picks":["DUKE","LOU","NEB","ILL","ARIZ","GONZ","MICH","ISU"],"e8_picks":["DUKE","NEB","ARIZ","ISU"],"f4_picks":["DUKE","ARIZ"],"e8_pct":[{},{},{},{}],"f4_pct":[{},{}],"champ_pct":{},"e8_elimination":[],"min_score":0,"max_score":0,"alive":false},"sgiunta43's Picks 1":{"name":"sgiunta43's Picks 1","owner":"Shane Giunta","current_pts":620,"champion":"FLA","tiebreaker_score":0,"outright_wins":0,"tiebreak_wins":0,"total_scenarios":0,"win_pct":0.0,"s16_picks":["DUKE","MSU","FLA","ILL","ARK","GONZ","MICH","UVA"],"e8_picks":["DUKE","FLA","ARK","UVA"],"f4_picks":["FLA","UVA"],"e8_pct":[{},{},{},{}],"f4_pct":[{},{}],"champ_pct":{},"e8_elimination":[],"min_score":0,"max_score":0,"alive":false},"Carson Hatfield's Picks 1":{"name":"Carson Hatfield's Picks 1","owner":"Carson Hatfield","current_pts":840,"champion":"ARIZ","tiebreaker_score":0,"outright_wins":4,"tiebreak_wins":0,"total_scenarios":4,"win_pct":50.0,"s16_picks":["DUKE","MSU","FLA","ILL","ARIZ","PUR","MICH","ISU"],"e8_picks":["DUKE","FLA","ARIZ","MICH"],"f4_picks":["DUKE","ARIZ"],"e8_pct":[{"CONN":100.0},{"ILL":100.0},{"ARIZ":100.0},{"MICH":100.0}],"f4_pct":[{"CONN":50.0,"ILL":50.0},{"ARIZ":100.0}],"champ_pct":{"CONN":25.0,"ARIZ":50.0,"ILL":25.0},"e8_elimination":[],"min_score":1000,"max_score":1320,"alive":true},"Maddyyyyyyyyy's Picks 1":{"name":"Maddyyyyyyyyy's Picks 1","owner":"Maddy Hanson","current_pts":600,"champion":"HOU","tiebreaker_score":0,"outright_wins":0,"tiebreak_wins":0,"total_scenarios":0,"win_pct":0.0,"s16_picks":["DUKE","CONN","CLEM","HOU","ARIZ","MIA","TTU","SCU"],"e8_picks":["CONN","HOU","MIA","TTU"],"f4_picks":["HOU","MIA"],"e8_pct":[{},{},{},{}],"f4_pct":[{},{}],"champ_pct":{},"e8_elimination":[],"min_score":0,"max_score":0,"alive":false},"Addison's Hot Wife":{"name":"Addison's Hot Wife","owner":"Marta Mueller","current_pts":540,"champion":"DUKE","tiebreaker_score":0,"outright_wins":0,"tiebreak_wins":0,"total_scenarios":0,"win_pct":0.0,"s16_picks":["DUKE","UCLA","NEB","HOU","WIS","GONZ","MICH","ISU"],"e8_picks":["DUKE","HOU","GONZ","MICH"],"f4_picks":["DUKE","MICH"],"e8_pct":[{},{},{},{}],"f4_pct":[{},{}],"champ_pct":{},"e8_elimination":[],"min_score":0,"max_score":0,"alive":false},"ESPNFAN8568101855's Picks 1":{"name":"ESPNFAN8568101855's Picks 1","owner":"Danielle Hancock","current_pts":760,"champion":"MICH","tiebreaker_score":0,"outright_wins":0,"tiebreak_wins":0,"total_scenarios":0,"win_pct":0.0,"s16_picks":["DUKE","MSU","FLA","ILL","ARIZ","GONZ","MICH","ISU"],"e8_picks":["DUKE","FLA","ARIZ","MICH"],"f4_picks":["DUKE","MICH"],"e8_pct":[{},{},{},{}],"f4_pct":[{},{}],"champ_pct":{},"e8_elimination":[],"min_score":0,"max_score":0,"alive":false},"NicoleStephens's Picks 1":{"name":"NicoleStephens's Picks 1","owner":"Nicole Stephens","current_pts":750,"champion":"MICH","tiebreaker_score":0,"outright_wins":0,"tiebreak_wins":0,"total_scenarios":0,"win_pct":0.0,"s16_picks":["DUKE","MSU","FLA","HOU","ARIZ","GONZ","MICH","UVA"],"e8_picks":["DUKE","FLA","ARIZ","MICH"],"f4_picks":["DUKE","MICH"],"e8_pct":[{},{},{},{}],"f4_pct":[{},{}],"champ_pct":{},"e8_elimination":[],"min_score":0,"max_score":0,"alive":false},"Losers bracket":{"name":"Losers bracket","owner":"Connor Otos","current_pts":770,"champion":"ARIZ","tiebreaker_score":0,"outright_wins":0,"tiebreak_wins":0,"total_scenarios":0,"win_pct":0.0,"s16_picks":["DUKE","UCLA","FLA","UNC","ARIZ","GONZ","MICH","TENN"],"e8_picks":["DUKE","FLA","ARIZ","MICH"],"f4_picks":["FLA","ARIZ"],"e8_pct":[{},{},{},{}],"f4_pct":[{},{}],"champ_pct":{},"e8_elimination":[],"min_score":0,"max_score":0,"alive":false},"make.me.like.mike's Picks 1":{"name":"make.me.like.mike's Picks 1","owner":"Addison Attar","current_pts":570,"champion":"FLA","tiebreaker_score":0,"outright_wins":0,"tiebreak_wins":0,"total_scenarios":0,"win_pct":0.0,"s16_picks":["DUKE","CONN","FLA","UNC","ARIZ","GONZ","MICH","UK"],"e8_picks":["DUKE","FLA","GONZ","UK"],"f4_picks":["FLA","GONZ"],"e8_pct":[{},{},{},{}],"f4_pct":[{},{}],"champ_pct":{},"e8_elimination":[],"min_score":0,"max_score":0,"alive":false},"Poo Poo Jacque":{"name":"Poo Poo Jacque","owner":"Hunter Kulik","current_pts":670,"champion":"ARIZ","tiebreaker_score":0,"outright_wins":0,"tiebreak_wins":0,"total_scenarios":0,"win_pct":0.0,"s16_picks":["KU","CONN","FLA","HOU","ARIZ","GONZ","MICH","UVA"],"e8_picks":["KU","HOU","ARIZ","MICH"],"f4_picks":["HOU","ARIZ"],"e8_pct":[{},{},{},{}],"f4_pct":[{},{}],"champ_pct":{},"e8_elimination":[],"min_score":0,"max_score":0,"alive":false},"Logo Cars":{"name":"Logo Cars","owner":"Carson Wright","current_pts":480,"champion":"MICH","tiebreaker_score":0,"outright_wins":0,"tiebreak_wins":0,"total_scenarios":0,"win_pct":0.0,"s16_picks":["SJU","USF","FLA","HOU","WIS","GONZ","MICH","ISU"],"e8_picks":["USF","FLA","WIS","MICH"],"f4_picks":["FLA","MICH"],"e8_pct":[{},{},{},{}],"f4_pct":[{},{}],"champ_pct":{},"e8_elimination":[],"min_score":0,"max_score":0,"alive":false}},"bracket_order":["Ranger's Benchwarmers","Carson Hatfield's Picks 1","sauced","The Wine Woodtips","Celeb","Butt toast","sgiunta43's Picks 1","Maddyyyyyyyyy's Picks 1","Addison's Hot Wife","ESPNFAN8568101855's Picks 1","NicoleStephens's Picks 1","Losers bracket","make.me.like.mike's Picks 1","Poo Poo Jacque","Logo Cars"],"e8_matchups":[{"team_a":"DUKE","team_b":"CONN","region":"East","label":"DUKE vs CONN"},{"team_a":"IOWA","team_b":"ILL","region":"South","label":"IOWA vs ILL"},{"team_a":"ARIZ","team_b":"PUR","region":"West","label":"ARIZ vs PUR"},{"team_a":"MICH","team_b":"TENN","region":"Midwest","label":"MICH vs TENN"}]};
+const BDATA = {"brackets":{"Ranger's Benchwarmers":{"name":"Ranger's Benchwarmers","owner":"Sarah Pierce","current_pts":840,"champion":"MICH","tiebreaker_score":0,"outright_wins":4,"tiebreak_wins":0,"total_scenarios":4,"win_pct":50.0,"s16_picks":["DUKE","CONN","NEB","HOU","ARIZ","GONZ","MICH","TENN"],"e8_picks":["DUKE","HOU","ARIZ","MICH"],"f4_picks":["DUKE","MICH"],"e8_pct":[{"CONN":100.0},{"ILL":100.0},{"ARIZ":100.0},{"MICH":100.0}],"f4_pct":[{"CONN":50.0,"ILL":50.0},{"MICH":100.0}],"champ_pct":{"CONN":25.0,"MICH":50.0,"ILL":25.0},"e8_elimination":[],"winning_scenarios":[{"f4":["CONN","MICH"],"champ":"CONN","score":1000},{"f4":["CONN","MICH"],"champ":"MICH","score":1320},{"f4":["ILL","MICH"],"champ":"ILL","score":1000},{"f4":["ILL","MICH"],"champ":"MICH","score":1320}],"min_score":1000,"max_score":1320,"alive":true},"sauced":{"name":"sauced","owner":"sawyer forseth","current_pts":790,"champion":"ARIZ","tiebreaker_score":0,"outright_wins":0,"tiebreak_wins":0,"total_scenarios":0,"win_pct":0.0,"s16_picks":["DUKE","UCLA","NEB","ILL","ARIZ","GONZ","MICH","ISU"],"e8_picks":["DUKE","ILL","ARIZ","ISU"],"f4_picks":["DUKE","ARIZ"],"e8_pct":[{},{},{},{}],"f4_pct":[{},{}],"champ_pct":{},"e8_elimination":[],"winning_scenarios":[],"min_score":0,"max_score":0,"alive":false},"The Wine Woodtips":{"name":"The Wine Woodtips","owner":"joe katz","current_pts":750,"champion":"ARIZ","tiebreaker_score":0,"outright_wins":0,"tiebreak_wins":0,"total_scenarios":0,"win_pct":0.0,"s16_picks":["KU","MSU","CLEM","HOU","ARIZ","MIA","MICH","ISU"],"e8_picks":["KU","HOU","ARIZ","MICH"],"f4_picks":["HOU","ARIZ"],"e8_pct":[{},{},{},{}],"f4_pct":[{},{}],"champ_pct":{},"e8_elimination":[],"winning_scenarios":[],"min_score":0,"max_score":0,"alive":false},"Celeb":{"name":"Celeb","owner":"Caleb Buzzas","current_pts":660,"champion":"DUKE","tiebreaker_score":0,"outright_wins":0,"tiebreak_wins":0,"total_scenarios":0,"win_pct":0.0,"s16_picks":["DUKE","LOU","FLA","TA&M","ARIZ","PUR","TTU","TENN"],"e8_picks":["DUKE","FLA","ARIZ","TENN"],"f4_picks":["DUKE","TENN"],"e8_pct":[{},{},{},{}],"f4_pct":[{},{}],"champ_pct":{},"e8_elimination":[],"winning_scenarios":[],"min_score":0,"max_score":0,"alive":false},"Butt toast":{"name":"Butt toast","owner":"Alex Nasralla","current_pts":700,"champion":"ARIZ","tiebreaker_score":0,"outright_wins":0,"tiebreak_wins":0,"total_scenarios":0,"win_pct":0.0,"s16_picks":["DUKE","LOU","NEB","ILL","ARIZ","GONZ","MICH","ISU"],"e8_picks":["DUKE","NEB","ARIZ","ISU"],"f4_picks":["DUKE","ARIZ"],"e8_pct":[{},{},{},{}],"f4_pct":[{},{}],"champ_pct":{},"e8_elimination":[],"winning_scenarios":[],"min_score":0,"max_score":0,"alive":false},"sgiunta43's Picks 1":{"name":"sgiunta43's Picks 1","owner":"Shane Giunta","current_pts":620,"champion":"FLA","tiebreaker_score":0,"outright_wins":0,"tiebreak_wins":0,"total_scenarios":0,"win_pct":0.0,"s16_picks":["DUKE","MSU","FLA","ILL","ARK","GONZ","MICH","UVA"],"e8_picks":["DUKE","FLA","ARK","UVA"],"f4_picks":["FLA","UVA"],"e8_pct":[{},{},{},{}],"f4_pct":[{},{}],"champ_pct":{},"e8_elimination":[],"winning_scenarios":[],"min_score":0,"max_score":0,"alive":false},"Carson Hatfield's Picks 1":{"name":"Carson Hatfield's Picks 1","owner":"Carson Hatfield","current_pts":840,"champion":"ARIZ","tiebreaker_score":0,"outright_wins":4,"tiebreak_wins":0,"total_scenarios":4,"win_pct":50.0,"s16_picks":["DUKE","MSU","FLA","ILL","ARIZ","PUR","MICH","ISU"],"e8_picks":["DUKE","FLA","ARIZ","MICH"],"f4_picks":["DUKE","ARIZ"],"e8_pct":[{"CONN":100.0},{"ILL":100.0},{"ARIZ":100.0},{"MICH":100.0}],"f4_pct":[{"CONN":50.0,"ILL":50.0},{"ARIZ":100.0}],"champ_pct":{"CONN":25.0,"ARIZ":50.0,"ILL":25.0},"e8_elimination":[],"winning_scenarios":[{"f4":["CONN","ARIZ"],"champ":"CONN","score":1000},{"f4":["CONN","ARIZ"],"champ":"ARIZ","score":1320},{"f4":["ILL","ARIZ"],"champ":"ILL","score":1000},{"f4":["ILL","ARIZ"],"champ":"ARIZ","score":1320}],"min_score":1000,"max_score":1320,"alive":true},"Maddyyyyyyyyy's Picks 1":{"name":"Maddyyyyyyyyy's Picks 1","owner":"Maddy Hanson","current_pts":600,"champion":"HOU","tiebreaker_score":0,"outright_wins":0,"tiebreak_wins":0,"total_scenarios":0,"win_pct":0.0,"s16_picks":["DUKE","CONN","CLEM","HOU","ARIZ","MIA","TTU","SCU"],"e8_picks":["CONN","HOU","MIA","TTU"],"f4_picks":["HOU","MIA"],"e8_pct":[{},{},{},{}],"f4_pct":[{},{}],"champ_pct":{},"e8_elimination":[],"winning_scenarios":[],"min_score":0,"max_score":0,"alive":false},"Addison's Hot Wife":{"name":"Addison's Hot Wife","owner":"Marta Mueller","current_pts":540,"champion":"DUKE","tiebreaker_score":0,"outright_wins":0,"tiebreak_wins":0,"total_scenarios":0,"win_pct":0.0,"s16_picks":["DUKE","UCLA","NEB","HOU","WIS","GONZ","MICH","ISU"],"e8_picks":["DUKE","HOU","GONZ","MICH"],"f4_picks":["DUKE","MICH"],"e8_pct":[{},{},{},{}],"f4_pct":[{},{}],"champ_pct":{},"e8_elimination":[],"winning_scenarios":[],"min_score":0,"max_score":0,"alive":false},"ESPNFAN8568101855's Picks 1":{"name":"ESPNFAN8568101855's Picks 1","owner":"Danielle Hancock","current_pts":760,"champion":"MICH","tiebreaker_score":0,"outright_wins":0,"tiebreak_wins":0,"total_scenarios":0,"win_pct":0.0,"s16_picks":["DUKE","MSU","FLA","ILL","ARIZ","GONZ","MICH","ISU"],"e8_picks":["DUKE","FLA","ARIZ","MICH"],"f4_picks":["DUKE","MICH"],"e8_pct":[{},{},{},{}],"f4_pct":[{},{}],"champ_pct":{},"e8_elimination":[],"winning_scenarios":[],"min_score":0,"max_score":0,"alive":false},"NicoleStephens's Picks 1":{"name":"NicoleStephens's Picks 1","owner":"Nicole Stephens","current_pts":750,"champion":"MICH","tiebreaker_score":0,"outright_wins":0,"tiebreak_wins":0,"total_scenarios":0,"win_pct":0.0,"s16_picks":["DUKE","MSU","FLA","HOU","ARIZ","GONZ","MICH","UVA"],"e8_picks":["DUKE","FLA","ARIZ","MICH"],"f4_picks":["DUKE","MICH"],"e8_pct":[{},{},{},{}],"f4_pct":[{},{}],"champ_pct":{},"e8_elimination":[],"winning_scenarios":[],"min_score":0,"max_score":0,"alive":false},"Losers bracket":{"name":"Losers bracket","owner":"Connor Otos","current_pts":770,"champion":"ARIZ","tiebreaker_score":0,"outright_wins":0,"tiebreak_wins":0,"total_scenarios":0,"win_pct":0.0,"s16_picks":["DUKE","UCLA","FLA","UNC","ARIZ","GONZ","MICH","TENN"],"e8_picks":["DUKE","FLA","ARIZ","MICH"],"f4_picks":["FLA","ARIZ"],"e8_pct":[{},{},{},{}],"f4_pct":[{},{}],"champ_pct":{},"e8_elimination":[],"winning_scenarios":[],"min_score":0,"max_score":0,"alive":false},"make.me.like.mike's Picks 1":{"name":"make.me.like.mike's Picks 1","owner":"Addison Attar","current_pts":570,"champion":"FLA","tiebreaker_score":0,"outright_wins":0,"tiebreak_wins":0,"total_scenarios":0,"win_pct":0.0,"s16_picks":["DUKE","CONN","FLA","UNC","ARIZ","GONZ","MICH","UK"],"e8_picks":["DUKE","FLA","GONZ","UK"],"f4_picks":["FLA","GONZ"],"e8_pct":[{},{},{},{}],"f4_pct":[{},{}],"champ_pct":{},"e8_elimination":[],"winning_scenarios":[],"min_score":0,"max_score":0,"alive":false},"Poo Poo Jacque":{"name":"Poo Poo Jacque","owner":"Hunter Kulik","current_pts":670,"champion":"ARIZ","tiebreaker_score":0,"outright_wins":0,"tiebreak_wins":0,"total_scenarios":0,"win_pct":0.0,"s16_picks":["KU","CONN","FLA","HOU","ARIZ","GONZ","MICH","UVA"],"e8_picks":["KU","HOU","ARIZ","MICH"],"f4_picks":["HOU","ARIZ"],"e8_pct":[{},{},{},{}],"f4_pct":[{},{}],"champ_pct":{},"e8_elimination":[],"winning_scenarios":[],"min_score":0,"max_score":0,"alive":false},"Logo Cars":{"name":"Logo Cars","owner":"Carson Wright","current_pts":480,"champion":"MICH","tiebreaker_score":0,"outright_wins":0,"tiebreak_wins":0,"total_scenarios":0,"win_pct":0.0,"s16_picks":["SJU","USF","FLA","HOU","WIS","GONZ","MICH","ISU"],"e8_picks":["USF","FLA","WIS","MICH"],"f4_picks":["FLA","MICH"],"e8_pct":[{},{},{},{}],"f4_pct":[{},{}],"champ_pct":{},"e8_elimination":[],"winning_scenarios":[],"min_score":0,"max_score":0,"alive":false}},"bracket_order":["Ranger's Benchwarmers","Carson Hatfield's Picks 1","sauced","The Wine Woodtips","Celeb","Butt toast","sgiunta43's Picks 1","Maddyyyyyyyyy's Picks 1","Addison's Hot Wife","ESPNFAN8568101855's Picks 1","NicoleStephens's Picks 1","Losers bracket","make.me.like.mike's Picks 1","Poo Poo Jacque","Logo Cars"],"e8_matchups":[{"team_a":"DUKE","team_b":"CONN","region":"East","label":"DUKE vs CONN"},{"team_a":"IOWA","team_b":"ILL","region":"South","label":"IOWA vs ILL"},{"team_a":"ARIZ","team_b":"PUR","region":"West","label":"ARIZ vs PUR"},{"team_a":"MICH","team_b":"TENN","region":"Midwest","label":"MICH vs TENN"}]};
 const GAMES = [{"slot":0,"region":"East","label":"DUKE vs CONN","team_a":"DUKE","team_b":"CONN","owners":[{"name":"Ranger's Benchwarmers","owner":"Sarah Pierce","a_pct":0,"b_pct":100.0,"pick":"DUKE","elim_if":"DUKE","champion":"MICH","alive":true},{"name":"sauced","owner":"sawyer forseth","a_pct":0.0,"b_pct":0.0,"pick":"DUKE","elim_if":null,"champion":"ARIZ","alive":false},{"name":"The Wine Woodtips","owner":"joe katz","a_pct":0.0,"b_pct":0.0,"pick":"KU","elim_if":null,"champion":"ARIZ","alive":false},{"name":"Celeb","owner":"Caleb Buzzas","a_pct":0.0,"b_pct":0.0,"pick":"DUKE","elim_if":null,"champion":"DUKE","alive":false},{"name":"Butt toast","owner":"Alex Nasralla","a_pct":0.0,"b_pct":0.0,"pick":"DUKE","elim_if":null,"champion":"ARIZ","alive":false},{"name":"sgiunta43's Picks 1","owner":"Shane Giunta","a_pct":0.0,"b_pct":0.0,"pick":"DUKE","elim_if":null,"champion":"FLA","alive":false},{"name":"Carson Hatfield's Picks 1","owner":"Carson Hatfield","a_pct":0,"b_pct":100.0,"pick":"DUKE","elim_if":"DUKE","champion":"ARIZ","alive":true},{"name":"Maddyyyyyyyyy's Picks 1","owner":"Maddy Hanson","a_pct":0.0,"b_pct":0.0,"pick":"CONN","elim_if":null,"champion":"HOU","alive":false},{"name":"Addison's Hot Wife","owner":"Marta Mueller","a_pct":0.0,"b_pct":0.0,"pick":"DUKE","elim_if":null,"champion":"DUKE","alive":false},{"name":"ESPNFAN8568101855's Picks 1","owner":"Danielle Hancock","a_pct":0.0,"b_pct":0.0,"pick":"DUKE","elim_if":null,"champion":"MICH","alive":false},{"name":"NicoleStephens's Picks 1","owner":"Nicole Stephens","a_pct":0.0,"b_pct":0.0,"pick":"DUKE","elim_if":null,"champion":"MICH","alive":false},{"name":"Losers bracket","owner":"Connor Otos","a_pct":0.0,"b_pct":0.0,"pick":"DUKE","elim_if":null,"champion":"ARIZ","alive":false},{"name":"make.me.like.mike's Picks 1","owner":"Addison Attar","a_pct":0.0,"b_pct":0.0,"pick":"DUKE","elim_if":null,"champion":"FLA","alive":false},{"name":"Poo Poo Jacque","owner":"Hunter Kulik","a_pct":0.0,"b_pct":0.0,"pick":"KU","elim_if":null,"champion":"ARIZ","alive":false},{"name":"Logo Cars","owner":"Carson Wright","a_pct":0.0,"b_pct":0.0,"pick":"USF","elim_if":null,"champion":"MICH","alive":false}]},{"slot":1,"region":"South","label":"IOWA vs ILL","team_a":"IOWA","team_b":"ILL","owners":[{"name":"Ranger's Benchwarmers","owner":"Sarah Pierce","a_pct":0,"b_pct":100.0,"pick":"HOU","elim_if":"IOWA","champion":"MICH","alive":true},{"name":"sauced","owner":"sawyer forseth","a_pct":0.0,"b_pct":0.0,"pick":"ILL","elim_if":null,"champion":"ARIZ","alive":false},{"name":"The Wine Woodtips","owner":"joe katz","a_pct":0.0,"b_pct":0.0,"pick":"HOU","elim_if":null,"champion":"ARIZ","alive":false},{"name":"Celeb","owner":"Caleb Buzzas","a_pct":0.0,"b_pct":0.0,"pick":"FLA","elim_if":null,"champion":"DUKE","alive":false},{"name":"Butt toast","owner":"Alex Nasralla","a_pct":0.0,"b_pct":0.0,"pick":"NEB","elim_if":null,"champion":"ARIZ","alive":false},{"name":"sgiunta43's Picks 1","owner":"Shane Giunta","a_pct":0.0,"b_pct":0.0,"pick":"FLA","elim_if":null,"champion":"FLA","alive":false},{"name":"Carson Hatfield's Picks 1","owner":"Carson Hatfield","a_pct":0,"b_pct":100.0,"pick":"FLA","elim_if":"IOWA","champion":"ARIZ","alive":true},{"name":"Maddyyyyyyyyy's Picks 1","owner":"Maddy Hanson","a_pct":0.0,"b_pct":0.0,"pick":"HOU","elim_if":null,"champion":"HOU","alive":false},{"name":"Addison's Hot Wife","owner":"Marta Mueller","a_pct":0.0,"b_pct":0.0,"pick":"HOU","elim_if":null,"champion":"DUKE","alive":false},{"name":"ESPNFAN8568101855's Picks 1","owner":"Danielle Hancock","a_pct":0.0,"b_pct":0.0,"pick":"FLA","elim_if":null,"champion":"MICH","alive":false},{"name":"NicoleStephens's Picks 1","owner":"Nicole Stephens","a_pct":0.0,"b_pct":0.0,"pick":"FLA","elim_if":null,"champion":"MICH","alive":false},{"name":"Losers bracket","owner":"Connor Otos","a_pct":0.0,"b_pct":0.0,"pick":"FLA","elim_if":null,"champion":"ARIZ","alive":false},{"name":"make.me.like.mike's Picks 1","owner":"Addison Attar","a_pct":0.0,"b_pct":0.0,"pick":"FLA","elim_if":null,"champion":"FLA","alive":false},{"name":"Poo Poo Jacque","owner":"Hunter Kulik","a_pct":0.0,"b_pct":0.0,"pick":"HOU","elim_if":null,"champion":"ARIZ","alive":false},{"name":"Logo Cars","owner":"Carson Wright","a_pct":0.0,"b_pct":0.0,"pick":"FLA","elim_if":null,"champion":"MICH","alive":false}]},{"slot":2,"region":"West","label":"ARIZ vs PUR","team_a":"ARIZ","team_b":"PUR","owners":[{"name":"Ranger's Benchwarmers","owner":"Sarah Pierce","a_pct":100.0,"b_pct":0,"pick":"ARIZ","elim_if":"PUR","champion":"MICH","alive":true},{"name":"sauced","owner":"sawyer forseth","a_pct":0.0,"b_pct":0.0,"pick":"ARIZ","elim_if":null,"champion":"ARIZ","alive":false},{"name":"The Wine Woodtips","owner":"joe katz","a_pct":0.0,"b_pct":0.0,"pick":"ARIZ","elim_if":null,"champion":"ARIZ","alive":false},{"name":"Celeb","owner":"Caleb Buzzas","a_pct":0.0,"b_pct":0.0,"pick":"ARIZ","elim_if":null,"champion":"DUKE","alive":false},{"name":"Butt toast","owner":"Alex Nasralla","a_pct":0.0,"b_pct":0.0,"pick":"ARIZ","elim_if":null,"champion":"ARIZ","alive":false},{"name":"sgiunta43's Picks 1","owner":"Shane Giunta","a_pct":0.0,"b_pct":0.0,"pick":"ARK","elim_if":null,"champion":"FLA","alive":false},{"name":"Carson Hatfield's Picks 1","owner":"Carson Hatfield","a_pct":100.0,"b_pct":0,"pick":"ARIZ","elim_if":"PUR","champion":"ARIZ","alive":true},{"name":"Maddyyyyyyyyy's Picks 1","owner":"Maddy Hanson","a_pct":0.0,"b_pct":0.0,"pick":"MIA","elim_if":null,"champion":"HOU","alive":false},{"name":"Addison's Hot Wife","owner":"Marta Mueller","a_pct":0.0,"b_pct":0.0,"pick":"GONZ","elim_if":null,"champion":"DUKE","alive":false},{"name":"ESPNFAN8568101855's Picks 1","owner":"Danielle Hancock","a_pct":0.0,"b_pct":0.0,"pick":"ARIZ","elim_if":null,"champion":"MICH","alive":false},{"name":"NicoleStephens's Picks 1","owner":"Nicole Stephens","a_pct":0.0,"b_pct":0.0,"pick":"ARIZ","elim_if":null,"champion":"MICH","alive":false},{"name":"Losers bracket","owner":"Connor Otos","a_pct":0.0,"b_pct":0.0,"pick":"ARIZ","elim_if":null,"champion":"ARIZ","alive":false},{"name":"make.me.like.mike's Picks 1","owner":"Addison Attar","a_pct":0.0,"b_pct":0.0,"pick":"GONZ","elim_if":null,"champion":"FLA","alive":false},{"name":"Poo Poo Jacque","owner":"Hunter Kulik","a_pct":0.0,"b_pct":0.0,"pick":"ARIZ","elim_if":null,"champion":"ARIZ","alive":false},{"name":"Logo Cars","owner":"Carson Wright","a_pct":0.0,"b_pct":0.0,"pick":"WIS","elim_if":null,"champion":"MICH","alive":false}]},{"slot":3,"region":"Midwest","label":"MICH vs TENN","team_a":"MICH","team_b":"TENN","owners":[{"name":"Ranger's Benchwarmers","owner":"Sarah Pierce","a_pct":100.0,"b_pct":0,"pick":"MICH","elim_if":"TENN","champion":"MICH","alive":true},{"name":"sauced","owner":"sawyer forseth","a_pct":0.0,"b_pct":0.0,"pick":"ISU","elim_if":null,"champion":"ARIZ","alive":false},{"name":"The Wine Woodtips","owner":"joe katz","a_pct":0.0,"b_pct":0.0,"pick":"MICH","elim_if":null,"champion":"ARIZ","alive":false},{"name":"Celeb","owner":"Caleb Buzzas","a_pct":0.0,"b_pct":0.0,"pick":"TENN","elim_if":null,"champion":"DUKE","alive":false},{"name":"Butt toast","owner":"Alex Nasralla","a_pct":0.0,"b_pct":0.0,"pick":"ISU","elim_if":null,"champion":"ARIZ","alive":false},{"name":"sgiunta43's Picks 1","owner":"Shane Giunta","a_pct":0.0,"b_pct":0.0,"pick":"UVA","elim_if":null,"champion":"FLA","alive":false},{"name":"Carson Hatfield's Picks 1","owner":"Carson Hatfield","a_pct":100.0,"b_pct":0,"pick":"MICH","elim_if":"TENN","champion":"ARIZ","alive":true},{"name":"Maddyyyyyyyyy's Picks 1","owner":"Maddy Hanson","a_pct":0.0,"b_pct":0.0,"pick":"TTU","elim_if":null,"champion":"HOU","alive":false},{"name":"Addison's Hot Wife","owner":"Marta Mueller","a_pct":0.0,"b_pct":0.0,"pick":"MICH","elim_if":null,"champion":"DUKE","alive":false},{"name":"ESPNFAN8568101855's Picks 1","owner":"Danielle Hancock","a_pct":0.0,"b_pct":0.0,"pick":"MICH","elim_if":null,"champion":"MICH","alive":false},{"name":"NicoleStephens's Picks 1","owner":"Nicole Stephens","a_pct":0.0,"b_pct":0.0,"pick":"MICH","elim_if":null,"champion":"MICH","alive":false},{"name":"Losers bracket","owner":"Connor Otos","a_pct":0.0,"b_pct":0.0,"pick":"MICH","elim_if":null,"champion":"ARIZ","alive":false},{"name":"make.me.like.mike's Picks 1","owner":"Addison Attar","a_pct":0.0,"b_pct":0.0,"pick":"UK","elim_if":null,"champion":"FLA","alive":false},{"name":"Poo Poo Jacque","owner":"Hunter Kulik","a_pct":0.0,"b_pct":0.0,"pick":"MICH","elim_if":null,"champion":"ARIZ","alive":false},{"name":"Logo Cars","owner":"Carson Wright","a_pct":0.0,"b_pct":0.0,"pick":"MICH","elim_if":null,"champion":"MICH","alive":false}]}];
 const RESULTS = {"1":"ILL","2":"ARIZ","0":"CONN","3":"MICH"};
 const GAME_ORDER = [1,2,0,3];
@@ -319,7 +311,7 @@ function switchBracket(name) {
   } else {
     deadBanner.classList.remove("visible");
   }
-  renderStats(); renderElimBanner(); renderBracketGrid(); renderInsights();
+  renderStats(); renderBracketGrid(); renderInsights();
 }
 
 function renderStats() {
@@ -328,21 +320,8 @@ function renderStats() {
     <div class="stat"><div class="val">${b.current_pts}</div><div class="label">Current PTS</div></div>
     <div class="stat"><div class="val">${b.champion}</div><div class="label">Champion Pick</div></div>
     <div class="stat"><div class="val">${b.win_pct}%</div><div class="label">Win Rate</div></div>
-    <div class="stat"><div class="val">${b.total_scenarios.toLocaleString()}</div><div class="label">Win Scenarios</div></div>
-    <div class="stat"><div class="val">${b.outright_wins.toLocaleString()}</div><div class="label">Outright</div></div>
-    <div class="stat"><div class="val">${b.tiebreak_wins.toLocaleString()}</div><div class="label">Tiebreak</div></div>
-    <div class="stat"><div class="val">${b.e8_elimination.length}</div><div class="label">Elim Games</div></div>
+    <div class="stat"><div class="val">${b.outright_wins} / 8</div><div class="label">Win Scenarios</div></div>
     <div class="stat"><div class="val">${b.min_score}–${b.max_score}</div><div class="label">Score Range</div></div>`;
-}
-
-function renderElimBanner() {
-  const b = currentBracket;
-  const banner = document.getElementById("elimBanner");
-  const safe = document.getElementById("safeBanner");
-  const games = document.getElementById("elimGames");
-  if (b.e8_elimination.length === 0) { banner.classList.remove("visible"); safe.classList.add("visible"); return; }
-  safe.classList.remove("visible"); banner.classList.add("visible");
-  games.innerHTML = b.e8_elimination.map(e => `<div class="elim-game"><span class="elim-region">${e.region}</span><span class="elim-detail">If <span class="eliminates">${e.eliminates_if_wins}</span> beats ${e.must_win} → bracket is <span class="eliminates">ELIMINATED</span>. <span class="must-win">${e.must_win} MUST WIN</span></span></div>`).join('');
 }
 
 function bracketTeamRowHTML(team, pct, pick, elimTeam, decided) {
@@ -390,34 +369,25 @@ function bracketGameNodeHTML(id, pctData, allTeams, pick, isElimGame, elimIfWins
 function renderBracketGrid() {
   const b = currentBracket;
   const grid = document.getElementById("bracketGrid");
-  const elimLookup = {};
-  for (const e of b.e8_elimination) elimLookup[e.game] = e.eliminates_if_wins;
 
-  const e8decided = (i) => RESULTS[String(i)] || null;
+  // F4 matchup teams (from locked E8 results)
+  const f4_0_teams = [RESULTS["0"] || MATCHUPS[0].team_a, RESULTS["1"] || MATCHUPS[1].team_a];
+  const f4_1_teams = [RESULTS["2"] || MATCHUPS[2].team_a, RESULTS["3"] || MATCHUPS[3].team_a];
+
   let html = "";
-  // Col 0: Left E8 (East + South)
-  html += `<div class="col"><div class="round-header">Elite 8</div><div class="region-tag">East</div>`;
-  html += bracketGameNodeHTML("e8_0", b.e8_pct[0], [MATCHUPS[0].team_a, MATCHUPS[0].team_b], b.e8_picks[0], 0 in elimLookup, elimLookup[0], false, e8decided(0));
-  html += `<div class="spacer-e8"></div><div class="region-tag">South</div>`;
-  html += bracketGameNodeHTML("e8_1", b.e8_pct[1], [MATCHUPS[1].team_a, MATCHUPS[1].team_b], b.e8_picks[1], 1 in elimLookup, elimLookup[1], false, e8decided(1));
+  // Col 0: Left F4 (East/South winner)
+  html += `<div class="col"><div class="round-header">Final Four</div>`;
+  html += `<div class="region-tag">${f4_0_teams[0]} vs ${f4_0_teams[1]}</div>`;
+  html += bracketGameNodeHTML("f4_0", b.f4_pct[0], f4_0_teams, b.f4_picks[0], false, null, false, null);
   html += `</div>`;
-  // Col 1: Left F4
-  html += `<div class="col"><div class="round-header">Final Four</div><div style="height:80px;"></div>`;
-  html += bracketGameNodeHTML("f4_0", b.f4_pct[0], null, b.f4_picks[0], false, null, false, null);
-  html += `</div>`;
-  // Col 2: Championship
-  html += `<div class="col-center"><div class="round-header" style="color:#f97316;">Championship</div><div style="height:150px;"></div>`;
+  // Col 1: Championship
+  html += `<div class="col-center"><div class="round-header" style="color:#f97316;">Championship</div><div style="height:40px;"></div>`;
   html += bracketGameNodeHTML("champ", b.champ_pct, null, b.champion, false, null, true, null);
   html += `</div>`;
-  // Col 3: Right F4
-  html += `<div class="col"><div class="round-header">Final Four</div><div style="height:80px;"></div>`;
-  html += bracketGameNodeHTML("f4_1", b.f4_pct[1], null, b.f4_picks[1], false, null, false, null);
-  html += `</div>`;
-  // Col 4: Right E8 (West + Midwest)
-  html += `<div class="col"><div class="round-header">Elite 8</div><div class="region-tag">West</div>`;
-  html += bracketGameNodeHTML("e8_2", b.e8_pct[2], [MATCHUPS[2].team_a, MATCHUPS[2].team_b], b.e8_picks[2], 2 in elimLookup, elimLookup[2], false, e8decided(2));
-  html += `<div class="spacer-e8"></div><div class="region-tag">Midwest</div>`;
-  html += bracketGameNodeHTML("e8_3", b.e8_pct[3], [MATCHUPS[3].team_a, MATCHUPS[3].team_b], b.e8_picks[3], 3 in elimLookup, elimLookup[3], false, e8decided(3));
+  // Col 2: Right F4 (West/Midwest winner)
+  html += `<div class="col"><div class="round-header">Final Four</div>`;
+  html += `<div class="region-tag">${f4_1_teams[0]} vs ${f4_1_teams[1]}</div>`;
+  html += bracketGameNodeHTML("f4_1", b.f4_pct[1], f4_1_teams, b.f4_picks[1], false, null, false, null);
   html += `</div>`;
   grid.innerHTML = html;
 }
@@ -427,45 +397,65 @@ function renderInsights() {
   const cards = document.getElementById("insightCards");
   let html = "";
 
-  // Must-Win E8
-  const mustWin = [];
-  for (let i = 0; i < 4; i++) { const e = Object.entries(b.e8_pct[i]); if (e.length === 1 && e[0][1] > 0) mustWin.push({team: e[0][0], game: MATCHUPS[i].label}); }
-  html += `<div class="insight-card"><h3>Must-Win in Elite 8</h3><p>${mustWin.length > 0 ? mustWin.map(m => `<span class="hl">${m.team}</span> (${m.game})`).join("<br>") : '<span class="dim">No single E8 game requires a specific winner in every path.</span>'}</p></div>`;
+  if (!b.alive) {
+    html += `<div class="insight-card"><h3>Status</h3><p><span class="danger">ELIMINATED</span> — No remaining scenario results in this bracket winning the group.</p></div>`;
+    cards.innerHTML = html;
+    return;
+  }
 
-  // Elimination Risks
-  html += `<div class="insight-card"><h3>Elimination Risks (E8)</h3><p>${b.e8_elimination.length > 0 ? b.e8_elimination.map(e => `<span class="danger">${e.eliminates_if_wins}</span> winning = <span class="danger">ELIMINATED</span>`).join("<br>") : '<span class="hl">No E8 result can eliminate this bracket.</span>'}</p></div>`;
+  // Winning Paths — enumerate the specific scenarios this bracket wins
+  const scenarios = b.winning_scenarios || [];
+  const totalScenarios = 8;
+  html += `<div class="insight-card" style="grid-column: 1 / -1;"><h3>Paths to Win (${b.outright_wins} of ${totalScenarios} scenarios)</h3>`;
+  if (scenarios.length > 0) {
+    html += `<div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:8px; margin-top:6px;">`;
+    for (const s of scenarios) {
+      html += `<div style="background:#0d1117; border:1px solid #1f2937; border-radius:6px; padding:10px;">`;
+      html += `<div style="font-size:11px; color:#4b5563; margin-bottom:4px;">Scenario</div>`;
+      html += `<div style="font-size:13px;"><span class="hl">${s.f4[0]}</span> wins F4</div>`;
+      html += `<div style="font-size:13px;"><span class="hl">${s.f4[1]}</span> wins F4</div>`;
+      html += `<div style="font-size:13px; margin-top:4px;"><span style="color:#f97316; font-weight:700;">${s.champ}</span> wins Championship</div>`;
+      html += `<div style="font-size:11px; color:#6b7280; margin-top:4px;">${s.score} pts</div>`;
+      html += `</div>`;
+    }
+    html += `</div>`;
+  } else {
+    html += `<p><span class="dim">No winning scenarios found.</span></p>`;
+  }
+  html += `</div>`;
 
-  // Final Four Requirements
+  // Requirements Summary
   const f4Reqs = [];
   for (let i = 0; i < 2; i++) {
     const entries = Object.entries(b.f4_pct[i]);
     if (entries.length === 1 && entries[0][1] > 0) {
-      f4Reqs.push({team: entries[0][0], side: i === 0 ? "Left" : "Right"});
+      f4Reqs.push(entries[0][0]);
     }
   }
-  let f4Html = '';
-  if (!b.alive) {
-    f4Html = '<span class="dim">Bracket eliminated.</span>';
-  } else if (f4Reqs.length > 0) {
-    f4Html = f4Reqs.map(r => `<span class="hl">${r.team}</span> must win their Final Four game`).join("<br>");
-  } else {
-    f4Html = '<span class="dim">Multiple F4 paths still open — no locked-in requirement.</span>';
-  }
-  html += `<div class="insight-card"><h3>Final Four Requirements</h3><p>${f4Html}</p></div>`;
+  const champEntries = Object.entries(b.champ_pct).sort((a,b_) => b_[1] - a[1]);
 
-  // Championship Requirements
-  const ce = Object.entries(b.champ_pct).sort((a,b_) => b_[1] - a[1]);
-  let champHtml = '';
-  if (!b.alive) {
-    champHtml = '<span class="dim">Bracket eliminated.</span>';
-  } else if (ce.length === 1) {
-    champHtml = `<span class="danger">${ce[0][0]}</span> must win <span class="danger">ALL remaining games</span> for this bracket to win the group`;
-  } else if (ce.length > 0) {
-    champHtml = ce.map(([t,p]) => `<span class="hl">${t}</span> ${p}%`).join(", ");
+  let reqHtml = '';
+  if (f4Reqs.length === 2 && champEntries.length === 1) {
+    reqHtml = `<span class="danger">${champEntries[0][0]}</span> must win all remaining games (F4 + Championship)`;
   } else {
-    champHtml = '<span class="dim">No championship paths remaining.</span>';
+    const parts = [];
+    if (f4Reqs.length > 0) {
+      parts.push(f4Reqs.map(t => `<span class="hl">${t}</span> must win their F4 game`).join("<br>"));
+    }
+    if (champEntries.length === 1) {
+      parts.push(`<span class="hl">${champEntries[0][0]}</span> must win the Championship`);
+    } else if (champEntries.length > 1) {
+      parts.push(`Champion can be: ${champEntries.map(([t,p]) => `<span class="hl">${t}</span> (${p}%)`).join(", ")}`);
+    }
+    if (parts.length === 0) {
+      parts.push('<span class="dim">Multiple paths remain — no single locked-in requirement.</span>');
+    }
+    reqHtml = parts.join("<br>");
   }
-  html += `<div class="insight-card"><h3>Championship Requirements</h3><p>${champHtml}</p></div>`;
+  html += `<div class="insight-card"><h3>Requirements</h3><p>${reqHtml}</p></div>`;
+
+  // Win Probability
+  html += `<div class="insight-card"><h3>Win Probability</h3><p style="font-size:24px; font-weight:700; color:#4ade80;">${b.win_pct}%</p><p style="font-size:11px; color:#6b7280;">${b.outright_wins} outright win${b.outright_wins !== 1 ? 's' : ''} out of ${totalScenarios} remaining scenarios</p></div>`;
 
   cards.innerHTML = html;
 }
